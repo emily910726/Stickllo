@@ -1,5 +1,10 @@
 <template>
     <div class="ui five column grid">
+        <div class = "row"/>
+        <div class = "row"/>
+        <div class = "row"/>
+        <div class = "row"/>
+        <div class = "row"/>
         <div class="row">
             <div class="column"></div>
             <div class="column"></div>
@@ -14,7 +19,7 @@
                 <div class="field">
                     <label>Username</label>
                     <input type="text" name="username" placeholder="Username" class="ui input"
-                        v-model="username" v-validate="'required'"
+                        v-model="username" v-validate="'required|email'"
                     >
                     <span v-show="errors.has('username')">{{ errors.first('username') }}</span>
                 </div>
@@ -27,7 +32,7 @@
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden">
+                        <input type="checkbox" tabindex="0">
                         <label>I agree to the Terms and Conditions</label>
                     </div>
                 </div>
